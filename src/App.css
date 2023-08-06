@@ -1,0 +1,124 @@
+body
+{
+    font-family: 'Arimo', sans-serif;
+    padding: 0%;
+    margin: 5px;
+}
+
+.search-container
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 6px;
+    padding: 4px;
+}
+
+input
+{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 25px;
+    font-size: 20px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+input:focus
+{
+    border-color: #007bff;
+}
+
+input::placeholder
+{
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+button
+{
+    margin: 10px;
+    border: none;
+    background-color: rgba(241, 27, 27);
+    color: white;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-radius: 25px;
+    font-size: 20px;
+    padding: 10px 30px;
+    transition: background 2s ease-out 4s;
+    border: 2.5px solid black;
+}
+
+button:hover
+{
+    background-color: rgb(228, 32, 32);
+    cursor: pointer;
+}
+button:active
+{
+    box-shadow: inset -2px -2px 3px rgba(0, 0, 0, 0.404);
+}
+
+.posts-container
+{
+    background-color: rgb(243, 242, 240);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    /* align-items: center;
+    justify-content: center; */
+    margin: 10px;
+    padding: 20px;
+}
+
+.image-container
+{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    border: 7px solid white;
+    /* width: 100%; */
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.info-container
+{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+    overflow: auto;
+}
+
+.info-container > h4
+{
+    font-size: 20px;
+    font-family: 'Anton', sans-serif;
+    font-weight: 100;
+    justify-self: flex-start;
+}
+
+.info-container > p
+{
+    justify-self: flex-end;
+}
+
+.info-container > a
+{
+    justify-self: flex-end;
+}
+
+.info-container span
+{
+    font-weight: 600;
+    color: khaki;
+}
