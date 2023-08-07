@@ -122,3 +122,8 @@ button:active
     font-weight: 600;
     color: khaki;
 }
+
+.no-results
+{
+    text-align: center;
+}

@@ -20,7 +20,7 @@ export default function Images()
     
     return (
         <div className = "posts-container">
-            {dataArrayElements}
+            {(dataArrayElements.length != 0) ? (dataArrayElements) : (<h2 className="no-results">Sorry, no results found!</h2>)}
         </div>
     );
 }
