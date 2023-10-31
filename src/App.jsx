@@ -1,5 +1,3 @@
-const dotenv = require("dotenv").config();
-
 import React from "react"
 import { imagesContext } from "./context/imagesContext";
 import Images from "./components/Images";
@@ -17,7 +15,7 @@ export default function App()
     }
     else
     {
-      fetch(`https://api.unsplash.com/search/photos?client_id=${process.env.CLIENT_ID}&query=${input}`)
+      fetch(`https://api.unsplash.com/search/photos?client_id=${import.meta.env.VITE_CLIENT_ID}&query=${input}`)   //how to use environment variables in Vite is mentioned in the Vite Docs. env variables are used differently in different bundlers.
         .then(res => res.json())
         .then(data => {
           console.log(data);
