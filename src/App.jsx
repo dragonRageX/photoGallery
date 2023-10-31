@@ -1,3 +1,5 @@
+const dotenv = require("dotenv").config();
+
 import React from "react"
 import { imagesContext } from "./context/imagesContext";
 import Images from "./components/Images";
@@ -15,7 +17,7 @@ export default function App()
     }
     else
     {
-      fetch(`https://api.unsplash.com/search/photos?client_id=AQVNI6Ku8y4tlxcGb_rS5bRwrX95C7ps1DNyNdkZHxw&query=${input}`)
+      fetch(`https://api.unsplash.com/search/photos?client_id=${process.env.CLIENT_ID}&query=${input}`)
         .then(res => res.json())
         .then(data => {
           console.log(data);
